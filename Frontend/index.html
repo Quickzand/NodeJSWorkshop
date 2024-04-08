@@ -17,6 +17,11 @@
 		<link rel="stylesheet" href="css/exercise4.css" />
 		<link rel="stylesheet" href="css/exercise5.css" />
 		<link rel="stylesheet" href="css/exercise6.css" />
+
+		<script src="scripts/exercise1.js" async defer></script>
+		<script src="scripts/exercise2.js" async defer></script>
+		<script src="scripts/exercise3.js" async defer></script>
+		<script src="scripts/exercise4.js" async defer></script>
 	</head>
 
 	<body>
@@ -56,32 +61,13 @@
 		<section id="exercise1" class="exercise">
 			<div class="exerciseHeader">
 				<h2>1. Display all stored dogs</h2>
-				<img src="images/refresh.svg" alt="Refresh Button" />
+				<img src="images/refresh.svg" alt="Refresh Button" id="refresh" />
 			</div>
 			<div class="exerciseSubheader">
 				Make the GET endpoint "/getDogs" return all the dogs stored in the JSON
 				file. The response should be an array of dog objects.
 			</div>
-			<div id="dogList">
-				<div class="dogCard">
-					<div class="name">Max</div>
-					<div class="breed">Golden Retriever</div>
-					<img src="images/dogs/dog.jpg" alt="Dog image" />
-					<div class="owner">John Doe</div>
-				</div>
-				<div class="dogCard">
-					<div class="name">Max</div>
-					<div class="breed">Golden Retriever</div>
-					<img src="images/dogs/dog.jpg" alt="Dog image" />
-					<div class="owner">John Doe</div>
-				</div>
-				<div class="dogCard">
-					<div class="name">Max</div>
-					<div class="breed">Golden Retriever</div>
-					<img src="images/dogs/dog.jpg" alt="Dog image" />
-					<div class="owner">John Doe</div>
-				</div>
-			</div>
+			<div id="dogList"></div>
 		</section>
 
 		<section id="exercise2" class="exercise">
@@ -99,7 +85,7 @@
 				<input type="text" id="breed" name="breed" />
 				<label for="owner">Owner:</label>
 				<input type="text" id="owner" name="owner" />
-				<div class="button outlined">Add Dog</div>
+				<div class="button outlined" id="addDogButton">Add Dog</div>
 			</div>
 		</section>
 		<section id="exercise3" class="exercise">
@@ -107,17 +93,17 @@
 				<h2>3. Edit a dog 🌚</h2>
 			</div>
 			<div class="exerciseSubheader">
-				Make the EDIT endpoint "/editDog" which takes in dogs JSON, determines
+				Make the PUT endpoint "/editDog" which takes in dogs JSON, determines
 				which dog it's for, and edits it in the stored file.
 			</div>
 			<div id="editDogForm" class="dogform">
 				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" />
+				<input type="text" id="editName" name="name" />
 				<label for="breed">Breed:</label>
-				<input type="text" id="breed" name="breed" />
+				<input type="text" id="editBreed" name="breed" />
 				<label for="owner">Owner:</label>
-				<input type="text" id="owner" name="owner" />
-				<div class="button outlined">Edit Dog</div>
+				<input type="text" id="editOwner" name="owner" />
+				<div class="button outlined" id="editDogButton">Edit Dog</div>
 			</div>
 		</section>
 		<section id="exercise4" class="exercise">
@@ -130,8 +116,8 @@
 			</div>
 			<div id="deleteDogForm" class="dogform">
 				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" />
-				<div class="button outlined">Delete Dog</div>
+				<input type="text" id="deleteName" name="name" />
+				<div class="button outlined" id="deleteDogButton">Delete Dog</div>
 			</div>
 		</section>
 		<footer>
