@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "name": "Max",
+    "breed": "Golden Retriever",
+    "owner": "John Doe"
+  },
+  {
+    "id": 2,
+    "name": "Bella",
+    "breed": "Labrador Retriever",
+    "owner": "Jane Smith"
+  },
+  {
+    "id": 3,
+    "name": "Charlie",
+    "breed": "Poodle",
+    "owner": "Michael Johnson"
+  },
+  {
+    "name": "Pistachio",
+    "breed": "Schnauzer",
+    "owner": "Michael A Sand"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "name": "nodejsworkshop",
+  "version": "1.0.0",
+  "description": "Design&Code 04/2024 NodeJS workshop",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quickzand/NodeJSWorkshop.git"
+  },
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Quickzand/NodeJSWorkshop/issues"
+  },
+  "homepage": "https://github.com/Quickzand/NodeJSWorkshop#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
