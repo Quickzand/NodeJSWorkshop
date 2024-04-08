@@ -1,0 +1,154 @@
+:root {
+    --bg-color: #000;
+    --outset-bg-color: #272727;
+    --accent-color: #5DA9E9;
+    --secondary-accent-color: #FFCBDD;
+    --text-color: #c2c2c2;
+    --font: 'Helvetica', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 70px;
+}
+
+* {
+    /* outline: solid blue 1px; */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--outset-bg-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0 20px;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+section {
+    margin: 100px 50px;
+    text-align: center;
+}
+
+.button {
+    color: var(--text-color);
+    background: var(--outset-bg-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.insetButton {
+    color: var(--text-color);
+    background: var(--bg-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.insetButton:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#personalInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+}
+
+header img {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+
+
+#skillsIcons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+}
+
+#skills img {
+    width: 4rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 150px;
+}
+
+.project img {
+    aspect-ratio: 1/1;
+    height: 200px;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background: var(--outset-bg-color);
+    padding: 20px;
+}
+
+#contactButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+}
