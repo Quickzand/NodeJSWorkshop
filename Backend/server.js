@@ -15,7 +15,7 @@ app.use(cors());
 
 const PORT = 3000;
 
-// Sets up server
+// Sets up server to listen on port 3000
 app.listen(PORT, () => {
 	console.log(`Server is listening on port ${PORT}`);
 });
