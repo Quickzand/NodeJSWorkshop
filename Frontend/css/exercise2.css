@@ -1,20 +1,19 @@
-/* #card-grid */
-
-#card-grid {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-/* .card */
-.card {
+.dogform {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	width: 230px;
-	height: 300px;
-	outline: var(--accent-color) solid 1px;
+	justify-content: center;
+	padding-top: 10px;
+}
+.dogform input {
+	width: 200px;
+	height: 30px;
 	margin: 10px;
-	border-radius: 15px;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid var(--accent-color);
+}
+
+.dogform .button {
+	color: black !important;
 }

@@ -1,14 +1,9 @@
 :root {
 	--background-color: #fff;
+	--outset-bg-color: #353535;
 	--inset-background-color: #d5d5d5;
-	--accent-color: #5da9e9;
-	--secondary-accent-color: #7bfe93;
-
-	--sky-color-dawn: #0a2e36;
-	--sky-color-morning: #7ec8e3;
-	--sky-color-noon: #87ceeb;
-	--sky-color-sunset: #ffd1cf;
-	--sky-color-dusk: #342e5f;
+	--accent-color: #7bfe93;
+	--secondary-accent-color: #5da9e9;
 }
 
 body {
@@ -39,9 +34,10 @@ nav {
 	align-items: center;
 	position: fixed;
 	top: 0;
-	background-color: var(--background-color);
+	background-color: var(--inset-background-color);
 	font-size: 1rem;
 	z-index: 100;
+	height: 100px;
 }
 
 #logo-box {
@@ -80,12 +76,13 @@ nav a:active {
 }
 
 header {
-	background-color: #fff;
-
+	background-color: var(--outset-bg-color);
+	color: var(--background-color);
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	margin: 0;
 }
 
 header img {
@@ -120,6 +117,13 @@ header img {
 	margin-top: 5px;
 	font-size: smaller;
 	transition: 0.3s ease;
+	cursor: pointer;
+}
+
+.button.outlined {
+	background-color: transparent;
+	color: white !important;
+	border: var(--accent-color) solid;
 }
 
 .button:hover {
@@ -185,115 +189,106 @@ section p {
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	background-color: #5da9e9;
-	background-image: linear-gradient(
-			to right,
-			rgb(255, 255, 255) 1px,
-			transparent 1px
-		),
-		linear-gradient(to bottom, rgb(255, 255, 255) 1px, transparent 1px);
-	background-size: 50px 50px; /* Adjust grid size as per your preference */
-	background-attachment: fixed;
-}
+	--hexagon-color: var(--outset-bg-color);
+	--border-color: #384;
+	background: radial-gradient(
+				circle farthest-side at 0% 50%,
+				var(--hexagon-color) 23.5%,
+				rgba(240, 166, 17, 0) 0
+			)
+			42px 60px,
+		radial-gradient(
+				circle farthest-side at 0% 50%,
+				var(--border-color) 24%,
+				rgba(240, 166, 17, 0) 0
+			)
+			38px 60px,
+		linear-gradient(
+				var(--hexagon-color) 14%,
+				rgba(240, 166, 17, 0) 0,
+				rgba(240, 166, 17, 0) 85%,
+				var(--hexagon-color) 0
+			)
+			0 0,
+		linear-gradient(
+				150deg,
+				var(--hexagon-color) 24%,
+				var(--border-color) 0,
+				var(--border-color) 26%,
+				rgba(240, 166, 17, 0) 0,
+				rgba(240, 166, 17, 0) 74%,
+				var(--border-color) 0,
+				var(--border-color) 76%,
+				var(--hexagon-color) 0
+			)
+			0 0,
+		linear-gradient(
+				30deg,
+				var(--hexagon-color) 24%,
+				var(--border-color) 0,
+				var(--border-color) 26%,
+				rgba(240, 166, 17, 0) 0,
+				rgba(240, 166, 17, 0) 74%,
+				var(--border-color) 0,
+				var(--border-color) 76%,
+				var(--hexagon-color) 0
+			)
+			0 0,
+		linear-gradient(
+				90deg,
+				var(--border-color) 2%,
+				var(--hexagon-color) 0,
+				var(--hexagon-color) 98%,
+				var(--border-color) 0%
+			)
+			0 0 var(--hexagon-color);
+	background-size: 80px 120px;
 
-.about-text {
-	width: 500px;
-	padding: 20px;
-	border: var(--background-color) solid;
-	border-radius: 20px;
-	color: var(--background-color);
-	background-color: var(--accent-color);
+	background-attachment: fixed;
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.9);
 }
 
 .about-item-img {
 	width: 200px;
+	filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 #about p {
 	text-align: left;
 }
 
-#exercise2 {
-	margin: 20px;
-	text-align: center;
+section {
+	margin: 0;
 }
 
 .exercise {
-	min-height: 50vh;
-	position: relative;
-	margin-bottom: 100px;
-}
-
-#exercise3,
-#exercise5 {
-	display: grid;
-	place-items: center;
-}
-
-/* Exercise 1 */
-
-#interactiveForm input {
-	border-radius: 20px;
-	width: 50%;
-	height: 1.5em;
-	padding: 10px;
-}
-
-#interactiveForm {
-	height: 100%;
-}
-
-/* Exercise 4 */
-
-#moving-box {
-	position: relative;
-	height: 50vh;
 	background-color: var(--inset-background-color);
-	width: 95vw;
-	margin-left: 2.5vw;
-	margin-top: 50px;
+	padding-bottom: 10px;
 }
 
-#box {
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	transform: translate(-50%, -50%);
-	background-color: var(--accent-color);
-}
-
-/* Exercise 5 */
-
-#interactiveButton {
-	background-color: var(--accent-color);
+.exerciseHeader {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	background-color: var(--outset-bg-color);
 	color: var(--background-color);
-	padding: 10px 20px;
-	border-radius: 20px;
-	border: var(--accent-color) solid;
-	margin-top: 5px;
-	font-size: smaller;
+	padding: 20px;
+}
+
+.exerciseHeader img {
+	width: 30px;
+	height: auto;
+	margin-left: 20px;
 	cursor: pointer;
 }
 
-/* Exercise 6 */
-#sky {
-	width: 100%;
-	height: 80vh;
-	background-color: var(--sky-color-morning);
-}
-
-#sun {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 100px;
-	height: 100px;
-	background-color: #f7d970;
-	border-radius: 50%;
-	filter: drop-shadow(0 0 20px #f7d970) drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+.exerciseSubheader {
+	font-size: 1rem;
+	background-color: var(--outset-bg-color);
+	color: var(--background-color);
+	padding: 20px;
+	padding-top: 0px;
 }
 
 footer {

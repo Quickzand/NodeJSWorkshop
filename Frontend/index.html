@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Advanced CSS Workshop</title>
+		<title>NodeJS Workshop</title>
 
 		<link rel="icon" href="images/DCLogo.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,27 +23,23 @@
 		<nav>
 			<div id="logo-box">
 				<img src="images/DCLogo.png" alt="My logo" id="logo" />
-				<p>ADVANCED CSS WORKSHOP</p>
+				<p>NodeJS WORKSHOP</p>
 			</div>
 			<ul>
 				<li><a href="#exercise1">Exercise 1</a></li>
 				<li><a href="#exercise2">Exercise 2</a></li>
 				<li><a href="#exercise3">Exercise 3</a></li>
 				<li><a href="#exercise4">Exercise 4</a></li>
-				<li><a href="#exercise5">Exercise 5</a></li>
-				<li><a href="#exercise6">Exercise 6</a></li>
 			</ul>
 		</nav>
 
 		<header>
 			<div id="landingPageText">
 				<h2>Welcome to the</h2>
-				<h2>Advanced CSS Workshop</h2>
-				<p>You will come out of here with a better understanding of CSS</p>
-				<a
-					class="button highlighted"
-					href="https://www.w3schools.com/cssref/index.php">
-					Click Here For CSS References</a
+				<h2>NodeJs Workshop</h2>
+				<p>This site will guide you through making a server in Node</p>
+				<a class="button" href="https://www.w3schools.com/nodejs/default.asp">
+					Here Are Some Node References</a
 				>
 			</div>
 			<div id="landingPageImage">
@@ -54,89 +50,92 @@
 		</header>
 
 		<section id="about">
-			<img class="about-item-img" src="images/css-3.png" alt="CSS Logo" />
-			<section class="about-text">
-				<h2>What Is CSS?</h2>
-				<p>
-					CSS, or Cascading Style Sheets, is a language used for describing the
-					presentation of a document written in HTML
-				</p>
-				<p>
-					It controls the layout, colors, fonts, and other visual aspects of web
-					pages, allowing designers to separate content from design. CSS
-					operates by selecting HTML elements and applying style rules to define
-					how those elements should appear on the screen or in print.
-				</p>
-			</section>
+			<img class="about-item-img" src="images/nodeLogo.png" alt="Node Logo" />
 		</section>
 
 		<section id="exercise1" class="exercise">
-			<h2>1. Try and make this form look better...</h2>
-			<form id="interactiveForm">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" />
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" />
-				<label for="message">Message:</label>
-				<input type="text" />
-			</form>
+			<div class="exerciseHeader">
+				<h2>1. Display all stored dogs</h2>
+				<img src="images/refresh.svg" alt="Refresh Button" />
+			</div>
+			<div class="exerciseSubheader">
+				Make the GET endpoint "/getDogs" return all the dogs stored in the JSON
+				file. The response should be an array of dog objects.
+			</div>
+			<div id="dogList">
+				<div class="dogCard">
+					<div class="name">Max</div>
+					<div class="breed">Golden Retriever</div>
+					<img src="images/dogs/dog.jpg" alt="Dog image" />
+					<div class="owner">John Doe</div>
+				</div>
+				<div class="dogCard">
+					<div class="name">Max</div>
+					<div class="breed">Golden Retriever</div>
+					<img src="images/dogs/dog.jpg" alt="Dog image" />
+					<div class="owner">John Doe</div>
+				</div>
+				<div class="dogCard">
+					<div class="name">Max</div>
+					<div class="breed">Golden Retriever</div>
+					<img src="images/dogs/dog.jpg" alt="Dog image" />
+					<div class="owner">John Doe</div>
+				</div>
+			</div>
 		</section>
 
 		<section id="exercise2" class="exercise">
-			<h2>2. Can You Create This Grid?</h2>
-			<section id="card-grid">
-				<section class="card">
-					<h4>Card ##</h4>
-					<img
-						src="images/Product quality-pana.png"
-						alt="Guy giving a thumbs up" />
-					<p>This is a standard card, you can do a lot with it</p>
-				</section>
-
-				<section class="card">
-					<h4>Card ##</h4>
-					<img
-						src="images/Product quality-pana.png"
-						alt="Guy giving a thumbs up" />
-					<p>This is a standard card, you can do a lot with it</p>
-				</section>
-
-				<section class="card">
-					<h4>Card ##</h4>
-					<img
-						src="images/Product quality-pana.png"
-						alt="Guy giving a thumbs up" />
-					<p>This is a standard card, you can do a lot with it</p>
-				</section>
-			</section>
+			<div class="exerciseHeader">
+				<h2>2. Add a new dog!</h2>
+			</div>
+			<div class="exerciseSubheader">
+				Make the POST endpoint "/createDog" which takes in dogs JSON and adds it
+				to the stored file.
+			</div>
+			<div id="newDogForm" class="dogform">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" />
+				<label for="breed">Breed:</label>
+				<input type="text" id="breed" name="breed" />
+				<label for="owner">Owner:</label>
+				<input type="text" id="owner" name="owner" />
+				<div class="button outlined">Add Dog</div>
+			</div>
 		</section>
 		<section id="exercise3" class="exercise">
-			<h2>3. Make it look like this part is loading... 😞</h2>
-
-			<img
-				src="images/loadingSpinner.png"
-				alt="loadingSpinner"
-				id="loadingSpinner" />
+			<div class="exerciseHeader">
+				<h2>3. Edit a dog 🌚</h2>
+			</div>
+			<div class="exerciseSubheader">
+				Make the EDIT endpoint "/editDog" which takes in dogs JSON, determines
+				which dog it's for, and edits it in the stored file.
+			</div>
+			<div id="editDogForm" class="dogform">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" />
+				<label for="breed">Breed:</label>
+				<input type="text" id="breed" name="breed" />
+				<label for="owner">Owner:</label>
+				<input type="text" id="owner" name="owner" />
+				<div class="button outlined">Edit Dog</div>
+			</div>
 		</section>
 		<section id="exercise4" class="exercise">
-			<h2>4. Make this box move around</h2>
-			<section id="moving-box">
-				<div id="box"></div>
-			</section>
-		</section>
-
-		<section id="exercise5" class="exercise">
-			<h2>5. Make the button be reactive</h2>
-			<div id="interactiveButton">Cool Button</div>
-		</section>
-		<section id="exercise6" class="exercise">
-			<h2>6. Make the day cycle</h2>
-			<div id="sky">
-				<div id="sun"></div>
+			<div class="exerciseHeader">
+				<h2>4. Delete a dog 😧</h2>
+			</div>
+			<div class="exerciseSubheader">
+				Make the DELETE endpoint "/deleteDog" which takes in a dog's name and
+				deletes it from the stored file
+			</div>
+			<div id="deleteDogForm" class="dogform">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" />
+				<div class="button outlined">Delete Dog</div>
 			</div>
 		</section>
 		<footer>
-			<p>&copy; 2024 Advanced CSS Workshop. All rights reserved.</p>
+			<p>&copy; 2024 Node JS Workshop. All rights reserved.</p>
 		</footer>
 	</body>
 </html>
